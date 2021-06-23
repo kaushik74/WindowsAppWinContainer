@@ -5,7 +5,8 @@
 
 FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
 WORKDIR /app
-EXPOSE 22742
+EXPOSE 8081
+ENV ASPNETCORE_URLS=http://*:8081
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
